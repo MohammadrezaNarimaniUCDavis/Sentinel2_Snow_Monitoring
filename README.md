@@ -88,5 +88,5 @@ Sentinel2_Snow_Monitoring/
 
 ## 👤 Author & Contribution
 
-Created by **Mohammadreza Narimani**, University of California, Davis, Digital Agriculture Lab ([github.com](https://github.com/MohammadrezaNarimaniUCDavis/Sentinel2_Snow_Monitoring?utm), [github.com](https://github.com/MohammadrezaNarimaniUCDavis?utm)).  
+Created by **Mohammadreza Narimani**, University of California, Davis, Digital Agriculture Lab.
 Pull requests and feedback are welcome!
