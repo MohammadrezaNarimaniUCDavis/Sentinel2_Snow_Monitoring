@@ -90,13 +90,3 @@ Sentinel2_Snow_Monitoring/
 
 Created by **Mohammadreza Narimani**, University of California, Davis, Digital Agriculture Lab ([github.com](https://github.com/MohammadrezaNarimaniUCDavis/Sentinel2_Snow_Monitoring?utm_source=chatgpt.com), [github.com](https://github.com/MohammadrezaNarimaniUCDavis?utm_source=chatgpt.com)).  
 Pull requests and feedback are welcome!
-
----
-
-## ⭐ Why This Repository Matters
-
-This project offers a streamlined, interactive pipeline for extracting and visualizing snow‑cover data from Sentinel‑2 satellite imagery. It simplifies region selection, cloud/snow masking, and batch downloading—a valuable asset for remote sensing workflows in environmental and agricultural research.
-
----
-
-**Let me know if you'd like to add badges (e.g., CI, license), installation improvements, or workflow enhancements.**
