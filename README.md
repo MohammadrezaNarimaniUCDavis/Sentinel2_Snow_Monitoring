@@ -1,87 +1,92 @@
-# Sentinel2_Snow_Monitoring
 
-A reproducible workflow and toolkit for **interactive snow monitoring and Sentinel-2 data download** using Python, Google Earth Engine, and open-source geospatial libraries.
+# Sentinel2_Snow_Monitoring 🌨️
+
+**A reproducible workflow for interactive snow‑cover monitoring using Sentinel‑2 imagery, Google Earth Engine, and open‑source geospatial tools.**
 
 ---
 
 ## ✨ Features
 
-- **Interactive ROI selection:** Click on a Sentinel-2 image map to create square sampling windows (512×512 pixels).
-- **Auto-save ROIs:** Each region is saved with center coordinates, acquisition date, and geometry as a shapefile.
-- **Batch Sentinel-2 download:** Automatically downloads the first 12 bands (B1–B12, excluding B10) for each ROI and date, clipped to each drawn square.
-- **Visualization:** Display your exported TIFFs and ROI boundaries on an interactive map inside your notebook.
-- **Handles cloud, snow, and image date selection transparently.**
+- **Interactive ROI selection**  
+  Draw square sampling windows (512×512 pixels) directly on a Sentinel‑2 map notebook.
+- **Auto‑save ROIs**  
+  Each region is saved as a shapefile with center coordinates, acquisition date, and geometry.
+- **Batch Sentinel‑2 download**  
+  Automatically fetches the first 12 bands (B1–B12, excluding B10) for each ROI and acquisition date, clipped to the drawn window.
+- **Visualization**  
+  Display downloaded TIFFs and ROI boundaries on an interactive map within your notebook.
+- **Cloud, snow, and date handling**  
+  Seamlessly filters imagery based on cloud and snow coverage, and handles date selection logic.
 
 ---
 
-## 🛰️ Use Cases
+## 🧭 Use Cases
 
-- Monitoring snow cover over Lake Tahoe or other regions
-- Time series analysis of Sentinel-2 surface reflectance
-- Remote sensing for hydrology, climate, or agriculture
+- Snow cover monitoring over Lake Tahoe or similar regions  
+- Sentinel‑2 time‑series analysis of surface reflectance  
+- Remote sensing applications in hydrology, climate, agriculture, and environmental studies
 
 ---
 
 ## 🚀 Quick Start
 
-1. **Clone the repo:**
-    ```bash
-    git clone https://github.com/MohammadrezaNarimaniUCDavis/Sentinel2_Snow_Monitoring.git
-    cd Sentinel2_Snow_Monitoring
-    ```
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/MohammadrezaNarimaniUCDavis/Sentinel2_Snow_Monitoring.git
+   cd Sentinel2_Snow_Monitoring
+   ```
 
-2. **Set up your environment:**  
-   (Recommended: use Anaconda/Miniconda)
-    ```bash
-    conda env create -f environment.yml
-    conda activate gee
-    ```
+2. **Set up your environment** (recommended: Conda)
+   ```bash
+   conda env create -f environment.yml
+   conda activate gee
+   ```
+   Or install manually:
+   ```bash
+   conda install -c conda-forge geemap geopandas rasterio gdal pyproj shapely fiona localtileserver
+   pip install earthengine-api
+   ```
 
-    Or manually install dependencies:
-    ```
-    conda install -c conda-forge geemap geopandas rasterio gdal pyproj shapely fiona localtileserver
-    pip install earthengine-api
-    ```
-
-3. **Run the main Jupyter notebook:**  
-   The workflow will prompt you for project paths and walk you through:
-   - Authenticating Google Earth Engine
-   - Drawing ROIs on a Sentinel-2 map
-   - Exporting ROI shapefiles
-   - Downloading Sentinel-2 imagery for each region/date
-   - Visualizing results
+3. **Run the main Jupyter notebook**  
+   It guides you through:
+   - Authenticating with Google Earth Engine  
+   - Drawing ROIs on an interactive Sentinel‑2 map  
+   - Exporting ROI shapefiles  
+   - Downloading Sentinel‑2 imagery for selected regions/dates  
+   - Visualizing the results
 
 ---
 
 ## 📁 Folder Structure
 
-- `Python_Code/S2_Download/` – Main Python and notebook files for the workflow
-- `SHP/` – (Auto-created) ROI shapefiles
-- `Sentinel2_Square_Exports/` – (Auto-created) Downloaded Sentinel-2 TIFF files
-- `README.md` – This file
+```
+Sentinel2_Snow_Monitoring/
+├── Python_Code/
+│   └── S2_Download/       ← Jupyter and Python code for main workflow
+├── SHP/                   ← Auto‑created folder with ROI shapefiles
+├── Sentinel2_Square_Exports/ ← Auto‑created TIFF files for downloaded imagery
+└── README.md              ← This file
+```
 
 ---
 
-## 📝 Notes
+## ⚠️ Notes
 
-- Only valid Sentinel-2 bands are downloaded (no B10).
-- All tools run cross-platform (Linux/Mac/Windows), but full compatibility is ensured in Conda environments.
-- If you encounter PROJ/GDAL/rasterio errors, update all geospatial dependencies with conda-forge.
+- Sentinel‑2 Band 10 is excluded as per ESA specifications.  
+- Compatible across Linux, macOS, and Windows – best results in a Conda-based setup.  
+- If you run into errors with PROJ, GDAL, or rasterio, ensure all geospatial dependencies are synced via conda‑forge.
 
 ---
 
 ## 📚 References
 
-- [Sentinel-2 Data Documentation](https://developers.google.com/earth-engine/datasets/catalog/COPERNICUS_S2_SR_HARMONIZED)
-- [Google Earth Engine Python API](https://developers.google.com/earth-engine/python_install)
-- [geemap documentation](https://geemap.org/)
+- Sentinel‑2 Data Documentation  
+- Google Earth Engine Python API  
+- geemap Python documentation
 
 ---
 
-## 👤 Author
+## 👤 Author & Contribution
 
-- **Mohammadreza Narimani, UC Davis**
-
----
-
-*Pull requests and improvements welcome!*
+Created by **Mohammadreza Narimani**, University of California, Davis, Digital Agriculture Lab.
+Pull requests and feedback are welcome!
