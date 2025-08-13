@@ -54,13 +54,10 @@ Click the image below to view the **full high-resolution PDF** of the project po
    pip install earthengine-api
    ```
 
-3. **Run the main Jupyter notebook**  
-   It guides you through:
-   - Authenticating with Google Earth Engine  
-   - Drawing ROIs on an interactive Sentinel-2 map  
-   - Exporting ROI shapefiles  
-   - Downloading Sentinel-2 imagery for selected regions/dates  
-   - Visualizing the results
+3. **Run the main Jupyter notebooks**  
+   - `Python_Code/S2_Download/Sentinel2_512_x_512_Download.ipynb` – ROI drawing & Sentinel‑2 download  
+   - `Python_Code/Drought_Figure/Drought_Figure.ipynb` – drought figure generation (PDSI)  
+   - `Python_Code/DeepLearning/Snow_Detection_LSTM.ipynb` – model training & inference
 
 ---
 
@@ -68,14 +65,36 @@ Click the image below to view the **full high-resolution PDF** of the project po
 
 ```
 Sentinel2_Snow_Monitoring/
-├── Python_Code/
-│   └── S2_Download/             ← Jupyter and Python code for main workflow
-├── SHP/                         ← Auto-created folder with ROI shapefiles
-├── Sentinel2_Square_Exports/    ← Auto-created TIFF files for downloaded imagery
+├── Data/
+│   └── CA_Drought/
+│       └── data.csv
+├── Figures/
+│   ├── Classification_Metrics/
+│   ├── Cloud_Image/
+│   ├── Confusion_Matrix/
+│   ├── Deep_Learning_Architecture/
+│   ├── Drought_Figure/
+│   ├── Sentinel2_Bands/
+│   ├── Snow_Image/
+│   └── Statewide_Snowpack/
 ├── Poster/
-│   └── Showcase_Poster/         ← PNG and PDF of the project poster
+│   ├── Poster_Template/
+│   │   └── E-SEARCH Poster Template.pptx
+│   └── Showcase_Poster/
+│       ├── ESEARCH_Summer_2025.pdf
+│       ├── ESEARCH_Summer_2025.png
+│       └── ESEARCH_Summer_2025.pptx
+├── Python_Code/
+│   ├── DeepLearning/
+│   │   └── Snow_Detection_Model.ipynb
+│   ├── Drought_Figure/
+│   │   └── Drought_Figure.ipynb
+│   └── S2_Download/
+│       └── Sentinel2_512_x_512_Download.ipynb
 └── README.md
 ```
+
+> _Note:_ Additional folders such as `SHP/` or `Sentinel2_Square_Exports/` may be created during processing when exporting shapefiles or imagery tiles.
 
 ---
 
